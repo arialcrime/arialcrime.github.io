@@ -1,7 +1,128 @@
 <!DOCTYPE html>
 <html>
-<body>
-<h1>Hello World</h1>
-<p>I'm hosted with GitHub Pages.</p>
-</body>
+	<head>
+		<meta charset="utf-8">
+		<title>arialcrime</title>
+		<style>
+		@font-face {
+            font-family: WorkSansExtraBold;
+            src:
+                url('./fonts/WorkSans-ExtraBold.woff2') format('woff2'),
+                url('./fonts/WorkSans-ExtraBold.woff') format('woff');
+            }
+        @font-face {
+            font-family: WorkSansRegular;
+            src:
+                url('./fonts/WorkSans-Regular.woff2') format('woff2'),
+                url('./fonts/WorkSans-Regular.woff') format('woff');
+        	}
+		
+		body {
+			margin: auto;
+			/*background-color: #f7f8f0;*/
+			background-color: #535664;
+			
+		}
+		
+		.content {
+            font-family: "WorkSansRegular", grotesque;
+            text-rendering: optimizeLegibility;
+            font-size: 2em;
+            padding: 0.3em 1em 0 1em;
+            text-align: left;
+		}
+		
+		.title {
+            font-family: "WorkSansExtraBold", grotesque;
+			margin-top: 15px;
+			margin-bottom: -15px;
+		}
+		
+		.container {
+		box-sizing: border-box; 
+		width: 80%;
+		min-width: 450px;
+		/*width: 400px;*/
+		margin: 0.4em;
+		color: white;
+		border: 3px solid;
+		padding: 0.25em 0;
+
+		}
+		
+		
+		.a:hover {		
+		}
+		
+		.a:active {
+		}
+		
+		a {
+		text-decoration: none;
+        color: white;
+		}
+        
+        .credits {
+        font-size: 0.5em;
+        }
+            
+        
+		</style>
+		
+	
+	<script>	
+	//HG-Animation
+		$(function() {
+		  // mouse movement over window changes color
+		  // hue: left to right
+		  // saturation: up and down
+			$(document).mousemove(function(e){
+				// not every mousemove
+				if ( e.pageX % 2 === 1 || e.pageY % 2 === 1 ) {
+					// hue = 0-360 on x-axis
+					var xSat = 100 - ( ( e.pageX / $(window).width() ) * 100 ) | 0;
+					// saturation = 0-100 on y-axis
+					var yHue = ( ( (e.pageY / $(window).height() ) * 360 ) | 0 );
+					
+		      // change bg color
+					$('body').css('background', 'hsl('+ yHue +', '+ xSat +'%, 65%)');
+				}
+			});
+  
+		});
+	</script>
+	
+	<script type="text/javascript">
+		  var _gaq = _gaq || [];
+		  _gaq.push(['_setAccount', 'UA-16401949-1']);
+		  _gaq.push(['_setDomainName', '.arialcrime.com']);
+		  _gaq.push(['_trackPageview']);
+		
+		  (function() {
+		    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+		    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+		    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+		  })(); 
+	</script>
+	</head>
+	
+	<body>
+	<div class="content">
+			<p class="title">Welcome to arialcrime! </br>
+			</p>
+            
+            <p class="text">This is a website run by me, Benedikt Bramböck. You can have a look at my <a href="http://cargocollective.com/arialcrime">portfolio</a> (not at the moment though), follow me on <a href="http://twitter.com/#!/arialcrime">twitter</a>, <a href="http://instagram.com/arialcrime">instagram</a> or <a href="http://arialcrime.tumblr.com/">tumblr</a>, have a look at my adventures into coding on my <a href="http://twitter.com/#!/arialcrime">github</a> or simply contact me through good old-fashioned <a title="contact"  href="mailto:arciecemoimnimr" onclick="this.href=this.href
+				   			  .replace(/arc/,'info')
+				              .replace(/iec/,'@')
+				              .replace(/emo/,'arialcrime')
+				              .replace(/imn/,'.')
+				              .replace(/imr/,'com')">email</a> if you want to talk.
+	    </p>
+        <p class="credits">
+        This site uses Work Sans by Wei Huang.
+        </p>
+	</div>
+    
+	</body>		
+
 </html>
