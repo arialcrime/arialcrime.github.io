@@ -52,9 +52,14 @@
         color: red;
 		}
         
-        #caps{
-            font-feature-settings: "c2sc", "smcp";
+        #caps {
+        font-feature-settings: "smcp" 1, "c2sc" 1;
+        -moz-font-feature-settings: "smcp" 1, "c2sc" 1;
+        -webkit-font-feature-settings: "smcp" 1, "c2sc" 1;  
+        -ms-font-feature-settings: "smcp" 1, "c2sc" 1;
+        -o-font-feature-settings: "smcp" 1, "c2sc" 1;
         }
+        
         .credits {
         font-size: 0.5em;
         }
@@ -106,7 +111,7 @@
 			<p class="title">Welcome to arialcrime! </br>
 			</p>
             
-            <p class="text">This is a website run by me, Benedikt Bramböck.</br> Soon, this page will feature all kinds of state of the art HTML and CSS craziness, scroll shenanigans and interpolation extravaganza. For now, this is the best that I could come up with, enjoy. </p>
+            <p class="text">This is a website run by me, Benedikt Bramböck.</br> Soon, this page will feature all kinds of state of the art <span id="caps">HTML</span> and <span id="caps">CSS</span> craziness, scroll shenanigans and interpolation extravaganza. For now, this is the best that I could come up with, enjoy. </p>
 <p class="text">You can have a look at my <a href="http://cargocollective.com/arialcrime" target="_blank">portfolio</a> (not at the moment though), follow me on <a href="http://twitter.com/#!/arialcrime" target="_blank">twitter</a>, <a href="http://instagram.com/arialcrime" target="_blank">instagram</a> or <a href="http://arialcrime.tumblr.com/" target="_blank">tumblr</a>, have a look at my adventures into coding on my <a href="https://github.com/arialcrime" target="_blank">github</a> page or simply contact me through good old-fashioned <a title="contact"  href="mailto:arciecemoimnimr" onclick="this.href=this.href
 				   			  .replace(/arc/,'info')
 				              .replace(/iec/,'@')
@@ -115,7 +120,7 @@
 				              .replace(/imr/,'com')">email</a> if you want to talk.
 	    </p>
         <p class="credits">
-        This site uses <a href="http://weiweihuanghuang.github.io/Work-Sans/">Work Sans</a> by Wei Huang.
+        This site uses <a id="caps" href="http://weiweihuanghuang.github.io/Work-Sans/">Work Sans</a> by Wei Huang.
         </p>
 	</div>
     
